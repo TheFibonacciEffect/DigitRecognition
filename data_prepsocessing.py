@@ -9,6 +9,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+from pprint import pprint
 
 # %% [markdown]
 # ## Importing the dataset
@@ -24,7 +25,7 @@ print(X)
 
 
 # %%
-print(y)
+pprint(y)
 
 # %% [markdown]
 # ## Taking care of missing data
@@ -66,7 +67,7 @@ X = np.array(ct.fit_transform(X))
 
 
 # %%
-print(X)
+pprint(X)
 
 # %% [markdown]
 # ### Encoding the Dependent Variable
@@ -78,7 +79,7 @@ y = le.fit_transform(y)
 
 
 # %%
-print(y)
+pprint(y)
 
 # %% [markdown]
 # ## Splitting the dataset into the Training set and Test set
@@ -89,19 +90,19 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
 
 
 # %%
-print(X_train)
+pprint(X_train)
 
 
 # %%
-print(X_test)
+pprint(X_test)
 
 
 # %%
-print(y_train)
+pprint(y_train)
 
 
 # %%
-print(y_test)
+pprint(y_test)
 
 # %% [markdown]
 # ## Feature Scaling
@@ -114,9 +115,9 @@ X_test[:, 3:] = sc.transform(X_test[:, 3:])
 
 
 # %%
-print(X_train)
+pprint(X_train)
 
 
 # %%
-print(X_test)
+pprint(X_test)
 
